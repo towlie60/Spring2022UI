@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<!-- This sml file is needed by log4j2 library -->
+<!-- log4js library looks for this file when you start the program -->
+<!-- this file has all custom configuaation of logging for this application -->
+
+<Configuration status="DEBUG">
+
+    <!-- Appenders(message writer types) are types of logging -->
+    <!-- There are print out in console appender -->
+    <!-- you can choose to write all of the logs to a file -->
+
+    <Appenders>
+        <!-- if you want your logs to go to console use console appender -->
+        <Console name ="ABC" target="SYSTEM_OUT">
+        </Console>
+    </Appenders>
+
+    <!-- define logger here -->
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="ABC"/>
+        </Root>
+    </Loggers>
+</Configuration>
